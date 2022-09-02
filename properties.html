@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Label Data Pairs tests</title>
+        <style>
+        .formlayout {
+            
+        }
+        .formrow {
+            display: flex;
+            justify-content: flex-end;
+            padding: .5em;
+        }
+        .label {
+            width: 50%;
+            text-align: right;
+        }
+        .data {
+            width: 50%;
+        }
+        .formrow > .label {
+            padding: 0 1em .5em 0;
+            flex: 1;
+        }
+        .formrow > .data {
+            flex: 2;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <h2>Plain DIVs</h2>
+        <div class="formlayout">
+            <div class="formrow">
+                <div class="label">File Type</div>
+                <div class="data">HEIC</div>
+            </div>
+            <div class="formrow">
+                <div class="label">File Name</div>
+                <div class="data">IMG_6653.HEIC</div>
+            </div>
+            <div class="formrow">
+                <div class="label">Resolution</div>
+                <div class="data">3024 x 4032 (12MP)</div>
+            </div>
+            <div class="formrow">
+                <div class="label">File Size</div>
+                <div class="data">2.2 MB</div>
+            </div>
+            <div class="formrow">
+                <div class="label">Camera</div>
+                <div class="data">Apple iPhone 13 Pro</div>
+            </div>
+            <div class="formrow">
+                <div class="label">Aperture</div>
+                <div class="data">f/1.5</div>
+            </div>
+            <div class="formrow">
+                <div class="label">Shutter</div>
+                <div class="data">1/3800 sec</div>
+            </div>
+        </div>
+        <h2>Labelled Outputs</h2>
+        <div class="formlayout">
+            <div class="formrow">
+                <label for="a" class="label">File Type</label>
+                <output id="a" class="data">HEIC</output>
+            </div>
+            <div class="formrow">
+                <label for="b" class="label">File Name</label>
+                <output id="b" class="data">IMG_6653.HEIC</output>
+            </div>
+            <div class="formrow">
+                <label for="c" class="label">Resolution</label>
+                <output id="c" class="data">3024 x 4032 (12MP)</output>
+            </div>
+            <div class="formrow">
+                <label for="d" class="label">File Size</label>
+                <output id="d" class="data">2.2 MB</output>
+            </div>
+            <div class="formrow">
+                <label for="e" class="label">Camera</label>
+                <output id="e" class="data">Apple iPhone 13 Pro</output>
+            </div>
+            <div class="formrow">
+                <label for="f" class="label">Aperture</label>
+                <output id="f" class="data">f/1.5</output>
+            </div>
+            <div class="formrow">
+                <label for="g" class="label">Shutter</label>
+                <output id="g" class="data">1/3800 sec</output>
+            </div>
+        </div>
+        <h2>Labelled aria textinputs</h2>
+        <div class="formlayout">
+            <div class="formrow">
+                <label id="a1" class="label">File Type</label>
+                <div aria-labelledby="a1" aria-readonly="true" role="textbox" class="data">HEIC</div>
+            </div>
+            <div class="formrow">
+                <label id="b1" class="label">File Name</label>
+                <div aria-labelledby="b1" aria-readonly="true" role="textbox" class="data">IMG_6653.HEIC</div>
+            </div>
+            <div class="formrow">
+                <label id="c1" class="label">Resolution</label>
+                <div aria-labelledby="c1" aria-readonly="true" role="textbox" class="data">3024 x 4032 (12MP)</div>
+            </div>
+            <div class="formrow">
+                <label id="d1" class="label">File Size</label>
+                <div aria-labelledby="d1" aria-readonly="true" role="textbox" class="data">2.2 MB</div>
+            </div>
+            <div class="formrow">
+                <label id="e1" class="label">Camera</label>
+                <div aria-labelledby="e1" aria-readonly="true" role="textbox" class="data">Apple iPhone 13 Pro</div>
+            </div>
+            <div class="formrow">
+                <label id="f1" class="label">Aperture</label>
+                <div aria-labelledby="f1" aria-readonly="true" role="textbox" class="data">f/1.5</div>
+            </div>
+            <div class="formrow">
+                <label id="g1" class="label">Shutter</label>
+                <div aria-labelledby="g1" aria-readonly="true" role="textbox" class="data">1/3800 sec</div>
+            </div>
+        </div>
+        <h2>Labelled read-only non tabbable Inputs</h2>
+        <div class="formlayout">
+            <div class="formrow">
+                <label for="a2" class="label">File Type</label>
+                <input type="text" readonly tabindex="-1" id="a2" class="data" value="HEIC">
+            </div>
+            <div class="formrow">
+                <label for="b2" class="label">File Name</label>
+                <input type="text" readonly tabindex="-1" id="b2" class="data" value="IMG_6653.HEIC">
+            </div>
+            <div class="formrow">
+                <label for="c2" class="label">Resolution</label>
+                <input type="text" readonly tabindex="-1" id="c2" class="data" value="3024 x 4032 (12MP)">
+            </div>
+            <div class="formrow">
+                <label for="d2" class="label">File Size</label>
+                <input type="text" readonly tabindex="-1" id="d2" class="data" value="2.2 MB">
+            </div>
+            <div class="formrow">
+                <label for="e2" class="label">Camera</label>
+                <input type="text" readonly tabindex="-1" id="e2" class="data" value="Apple iPhone 13 Pro">
+            </div>
+            <div class="formrow">
+                <label for="f2" class="label">Aperture</label>
+                <input type="text" readonly tabindex="-1" id="f2" class="data" value="f/1.5">
+            </div>
+            <div class="formrow">
+                <label for="g2" class="label">Shutter</label>
+                <input type="text" readonly tabindex="-1" id="g2" class="data" value="1/3800 sec">
+            </div>
+        </div>
+        <h2>DL/DD/DT</h2>
+        <dl class="formlayout">
+            <div class="formrow">
+                <dd class="label">File Type</dd>
+                <dt class="data">HEIC</dt>
+            </div>
+            <div class="formrow">
+                <dd class="label">File Name</dd>
+                <dt class="data">IMG_6653.HEIC</dt>
+            </div>
+            <div class="formrow">
+                <dd class="label">Resolution</dd>
+                <dt class="data">3024 x 4032 (12MP)</dt>
+            </div>
+            <div class="formrow">
+                <dd class="label">File Size</dd>
+                <dt class="data">2.2 MB</dt>
+            </div>
+            <div class="formrow">
+                <dd class="label">Camera</dd>
+                <dt class="data">Apple iPhone 13 Pro</dt>
+            </div>
+            <div class="formrow">
+                <dd class="label">Aperture</dd>
+                <dt class="data">f/1.5</dt>
+            </div>
+            <div class="formrow">
+                <dd class="label">Shutter</dd>
+                <dt class="data">1/3800 sec</dt>
+            </div>
+        </dl>
+        <h2>Table</h2>
+        <div class="formlayout" role="table">
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">File Type</div>
+                <div class="data" role="cell">HEIC</div>
+            </div>
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">File Name</div>
+                <div class="data" role="cell">IMG_6653.HEIC</div>
+            </div>
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">Resolution</div>
+                <div class="data" role="cell">3024 x 4032 (12MP)</div>
+            </div>
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">File Size</div>
+                <div class="data" role="cell">2.2 MB</div>
+            </div>
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">Camera</div>
+                <div class="data" role="cell">Apple iPhone 13 Pro</div>
+            </div>
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">Aperture</div>
+                <div class="data" role="cell">f/1.5</div>
+            </div>
+            <div class="formrow" role="row">
+                <div class="label" role="rowheader">Shutter</div>
+                <div class="data" role="cell">1/3800 sec</div>
+            </div>
+        </div>
+        <h2>List</h2>
+        <div class="formlayout" role="list">
+            <div class="formrow" role="listitem">
+                <div class="label">File Type</div>
+                <div class="data">HEIC</div>
+            </div>
+            <div class="formrow" role="listitem">
+                <div class="label">File Name</div>
+                <div class="data">IMG_6653.HEIC</div>
+            </div>
+            <div class="formrow" role="listitem">
+                <div class="label">Resolution</div>
+                <div class="data">3024 x 4032 (12MP)</div>
+            </div>
+            <div class="formrow" role="listitem">
+                <div class="label">File Size</div>
+                <div class="data">2.2 MB</div>
+            </div>
+            <div class="formrow" role="listitem">
+                <div class="label">Camera</div>
+                <div class="data">Apple iPhone 13 Pro</div>
+            </div>
+            <div class="formrow" role="listitem">
+                <div class="label">Aperture</div>
+                <div class="data">f/1.5</div>
+            </div>
+            <div class="formrow" role="listitem">
+                <div class="label">Shutter</div>
+                <div class="data">1/3800 sec</div>
+            </div>
+        </div>
+        <h2>Paragraphs</h2>
+        <div class="formlayout">
+            <p class="formrow">
+                <span class="label">File Type</span>
+                <span class="data">HEIC</span>
+            </p>
+            <p class="formrow">
+                <span class="label">File Name</span>
+                <span class="data">IMG_6653.HEIC</span>
+            </p>
+            <p class="formrow">
+                <span class="label">Resolution</span>
+                <span class="data">3024 x 4032 (12MP)</span>
+            </p>
+            <p class="formrow">
+                <span class="label">File Size</span>
+                <span class="data">2.2 MB</span>
+            </p>
+            <p class="formrow">
+                <span class="label">Camera</span>
+                <span class="data">Apple iPhone 13 Pro</span>
+            </p>
+            <p class="formrow">
+                <span class="label">Aperture</span>
+                <span class="data">f/1.5</span>
+            </p>
+            <p class="formrow">
+                <span class="label">Shutter</span>
+                <span class="data">1/3800 sec</span>
+            </p>
+        </div>
+        <h2>Add a group</h2>
+        <div class="formlayout">
+            <div class="formrow" role="group">
+                <div class="label">File Type</div>
+                <div class="data">HEIC</div>
+            </div>
+            <div class="formrow" role="group">
+                <div class="label">File Name</div>
+                <div class="data">IMG_6653.HEIC</div>
+            </div>
+            <div class="formrow" role="group">
+                <div class="label">Resolution</div>
+                <div class="data">3024 x 4032 (12MP)</div>
+            </div>
+            <div class="formrow" role="group">
+                <div class="label">File Size</div>
+                <div class="data">2.2 MB</div>
+            </div>
+            <div class="formrow" role="group">
+                <div class="label">Camera</div>
+                <div class="data">Apple iPhone 13 Pro</div>
+            </div>
+            <div class="formrow" role="group">
+                <div class="label">Aperture</div>
+                <div class="data">f/1.5</div>
+            </div>
+            <div class="formrow" role="group">
+                <div class="label">Shutter</div>
+                <div class="data">1/3800 sec</div>
+            </div>
+        </div>
+    </body>
+</html>
